@@ -1,0 +1,16 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: autoscale
+  namespace: default
+spec:
+  runLatest:
+    configuration:
+      revisionTemplate:
+        metadata:
+          annotations:
+            # Target 1 in-flight-requests per pod.
+            autoscaling.knative.dev/target: "1"
+        spec:
+          container:
+            image: gcr.io/knative-samples/autoscale-go:0.1
