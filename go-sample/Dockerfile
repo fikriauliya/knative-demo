@@ -4,4 +4,5 @@ WORKDIR /go/src/app
 EXPOSE 8080
 COPY . .
 
+
 CMD ["go", "run", "main.go"]
