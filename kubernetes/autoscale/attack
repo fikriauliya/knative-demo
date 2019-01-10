@@ -1,0 +1,2 @@
+GET http://35.187.241.194?sleep=1000&prime=10000&bloat=5
+Host: autoscale.default.example.com

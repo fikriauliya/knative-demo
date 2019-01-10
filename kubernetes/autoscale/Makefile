@@ -7,3 +7,5 @@ curl:
 	curl -H "Host: ${HOST_URL}" http://${IP_ADDRESS}
 load:
 	~/go/bin/hey -z 5s -c 50 -host "${HOST_URL}" "http://${IP_ADDRESS}?sleep=100&prime=10000&bloat=5" 
+load_vegeta:
+	cat attack | ~/go/bin/vegeta attack -rate=300 -duration=5s | tee results.bin | ~/go/bin/vegeta report
