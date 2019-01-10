@@ -12,6 +12,6 @@ func handler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", handler)
-	log.Fatal(http.ListenAndServe(":8080", nil))
-	fmt.Print("Web server is available at port :8080")
+	log.Fatal(http.ListenAndServe(":80", nil))
+	fmt.Print("Web server is available at port :80")
 }
